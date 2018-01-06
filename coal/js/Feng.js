@@ -22,5 +22,8 @@ let Feng = {
         }
         return arr;
     },
+    a(){
+        alert(23)
+    }
 
 }
