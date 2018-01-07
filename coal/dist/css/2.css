@@ -1,0 +1,27 @@
+.content {
+    margin:2.8vh 3.5vw 0vh 3.5vw;
+}
+.top {
+    width:60vw;
+    float: left;
+    margin-bottom: 1.8vh;
+}
+.bottom {
+    width:30vw;
+    float: left;
+}
+
+#t01 {
+    /*width:46vw;*/
+    height:79vh;
+    margin-right: 1vw;
+    /*border:1px solid #0096de;*/
+}
+
+
+#t04,#t02 ,#t03{
+    width:30vw;
+    height:25vh;
+    border:1px solid #0096de ;
+    margin-bottom: 1.8vh;
+}

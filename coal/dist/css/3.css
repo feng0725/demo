@@ -1,0 +1,58 @@
+.content {
+    margin:2.8vh 3.5vw 0vh 3.5vw;
+}
+.top {
+    margin-bottom: 1.8vh;
+}
+.t01  {
+     float: left;
+     width:61vw;
+    margin-right: 1vw;
+    position: relative;
+
+}
+.t01 ul {
+    position: absolute;
+    top:8%;
+    left:10%;
+    border:1px solid #0096de;
+    z-index: 99;
+}
+.t01 ul li {
+    width:4.5vw;
+    color:#63a1b0;
+    height:2.5vh;
+    line-height: 2.5vh;
+    float: left;
+    text-align: center;
+    cursor:pointer;
+}
+.t01 ul li.active{
+    color:#fff;
+    background-color:#072b62
+}
+#t01 {
+    width:61vw;
+    height:39vh;
+    border:1px solid #0096de;
+    float: left;
+}
+#t02 {
+    width:30vw;
+    height:39vh;
+    border:1px solid #0096de;
+    float: left;
+
+}
+
+#t03,#t04 ,#t05{
+    width:30vw;
+    height:39vh;
+    border:1px solid #0096de ;
+    margin-right: 1vw;
+    float: left;
+
+}
+#t05{
+    margin:0;
+}

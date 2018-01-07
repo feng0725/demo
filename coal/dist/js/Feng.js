@@ -17,7 +17,7 @@ var Feng = {
         return arr;
     },
     rnd: function rnd(n, m) {
-        return Math.floor(Math.random() * n + m);
+        return Math.floor(Math.random() * m + n);
     },
     rndArr: function rndArr(length, n, m) {
         var arr = [];
@@ -26,7 +26,11 @@ var Feng = {
         }
         return arr;
     },
-    a: function a() {
-        alert(23);
+    monthArr: function monthArr() {
+        var arr = [];
+        for (var i = 1; i <= 12; i++) {
+            arr.push(i + '月');
+        }
+        return arr;
     }
 };

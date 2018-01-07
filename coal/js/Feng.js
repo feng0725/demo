@@ -13,7 +13,7 @@ let Feng = {
         return arr
     },
     rnd(n, m) {
-        return Math.floor(Math.random() * n + m)
+        return Math.floor(Math.random() * m + n)
     },
     rndArr(length, n, m) {
         let arr = []
@@ -22,8 +22,12 @@ let Feng = {
         }
         return arr;
     },
-    a(){
-        alert(23)
+    monthArr(){
+         var arr = [];
+         for(var i =1; i<=12;i++){
+             arr.push(i+'月')
+         }
+         return arr;
     }
 
 }

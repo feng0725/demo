@@ -1,0 +1,64 @@
+.content{
+    margin:0 2.3vw;
+}
+.left,.right {
+    width:25vw;
+    float: left;
+}
+.center{
+    width:44vw;
+    float: left;
+}
+
+#t01,#t02 ,#t03,#t04,#t05{
+    width:24.8vw;
+    height:28vh;
+    border:1px solid #0096de ;
+    margin-bottom: 1.8vh;
+}
+#t03 {
+    height: 24vh;
+}
+#map {
+    height: 60vh;
+    /*border:1px solid #f00*/
+}
+
+table {
+    color:#e5f9fa;
+
+}
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding:0.45vh;
+    text-align: center;
+    font-size:0.2vw;
+}
+h2 {
+    font-size:1vw;
+    color:#e5f9fa;
+    text-align: center;
+}
+.name {
+    font-size:0.2vw;
+    color:#e5f9fa;
+    text-align: right;
+}
+.center ul {
+    width:40vw;
+    margin:0 auto;
+    margin-top:2vh;
+}
+.center ul li {
+    width:10vw;
+    float: left;
+    text-align: center;
+    font-size:1vw;
+}
+.center ul li div:nth-child(1) {
+    font-size:1.5vw;
+    margin-bottom: 1vh;
+    color:#fcde2c
+}
+.center ul li div:nth-child(2) {
+    color:#cdcdd4
+}
