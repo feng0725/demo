@@ -29,6 +29,7 @@
         "textStyle": {},
         "title": {
             "left":"center",
+            "top":'2%',
             "textStyle": {
                 "color": "#ffffff"
             },
@@ -419,7 +420,7 @@
             }
         },
         "legend": {
-            "left":"right",
+            "left":"80%",
             "top":"5%",
             "textStyle": {
                 "color": "#e5f9fa"

@@ -32,5 +32,6 @@ var Feng = {
             arr.push(i + '月');
         }
         return arr;
-    }
+    },
+    a: function a() {}
 };
