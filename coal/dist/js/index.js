@@ -18,9 +18,149 @@ function setT01(json) {
 
     var option = {
 
+        color: ['#cf757c', '#0084f1', '#aec253'],
+        title: {
+            text: '主要产品生产对比'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        legend: {
+            data: ['原煤', '商品煤', '化工产品']
+
+        },
+        xAxis: [{
+            type: 'category',
+            axisLabel: {
+                interval: 0
+            },
+            data: ['A公司', 'B公司', 'C公司', 'D公司', 'E公司', 'F公司', 'G公司']
+
+        }],
+        yAxis: [{
+            type: 'value',
+            name: '单位：万元'
+        }],
+        series: [{
+            name: '原煤',
+            type: 'line',
+            barWidth: '60%',
+            data: Feng.rndArr(7, 10, 100)
+        }, {
+            name: '商品煤',
+            type: 'line',
+            barWidth: '60%',
+            data: Feng.rndArr(7, 10, 100)
+        }, {
+            name: '化工产品',
+            type: 'line',
+            barWidth: '60%',
+            data: Feng.rndArr(7, 10, 100)
+        }]
+    };
+    json.obj.setOption(option);
+}
+
+function setT02(json) {
+
+    var option = {
+
+        color: ['#2fb8b8', '#0084f1', '#d9a82b'],
+        title: {
+            text: '各公司工资总额'
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        legend: {
+            data: ['金额', '实际', '均线']
+
+        },
+        yAxis: [{
+            type: 'category',
+            axisLabel: {
+                interval: 0
+            },
+            name: '单位：万元',
+            nameTextStyle: {
+                color: '#e5f9fa'
+            },
+            data: ['A公司', 'B公司', 'C公司', 'D公司', 'E公司', 'F公司', 'G公司']
+
+        }],
+        xAxis: [{
+            type: 'value',
+            name: '单位：万元'
+        }],
+        series: [{
+            name: '金额',
+            type: 'bar',
+            barWidth: '60%',
+            data: Feng.rndArr(7, 10, 100)
+        }]
+    };
+    json.obj.setOption(option);
+}
+
+function setT03(json) {
+
+    var option = {
+
+        title: {
+            text: '各公司营业收入对比'
+        },
+        color: ['#9c43a5', '#db502c', '#0084f1', '#d9a82b', '#a6d1ff', '#d4555e', '#3a8e3a'],
+        legend: {
+            orient: 'vertical',
+            align: 'left',
+            left: 'right',
+            top: '20%',
+            data: ['A公司', 'B公司', 'C公司', 'D公司', 'E公司', 'F公司', 'G公司']
+        },
+        series: [{
+            name: '访问来源',
+            type: 'pie',
+            radius: '75%',
+            center: ['40%', '60%'],
+            label: {
+                normal: {
+                    show: false
+                }
+            },
+            data: [{ value: 400, name: 'A公司' }, { value: 200, name: 'B公司' }, { value: 300, name: 'C公司' }, { value: 150, name: 'D公司' }, { value: 240, name: 'E公司' }, { value: 300, name: 'F公司' }, { value: 120, name: 'G公司' }],
+            roseType: 'radius'
+
+        }]
+
+    };
+    json.obj.setOption(option);
+}
+
+function setT04(json) {
+
+    var option = {
+
         color: ['#aec253', '#0084f1', '#d9a82b'],
         title: {
-            text: '收入'
+            text: '各公司人员占比'
         },
         tooltip: {
             trigger: 'axis',
@@ -43,141 +183,15 @@ function setT01(json) {
             axisLabel: {
                 interval: 0
             },
-            data: ['煤炭', '化工', '有色\n金属', '装备\n制造', '物流\n贸易', '建筑\n矿建', '现代\n服务业']
+            data: ['A公司', 'B公司', 'C公司', 'D公司', 'E公司', 'F公司', 'G公司']
 
         }],
         yAxis: [{
             type: 'value',
-            name: '单位：万元'
+            name: '单位：人'
         }],
         series: [{
             name: '收入',
-            type: 'bar',
-            barWidth: '60%',
-            data: Feng.rndArr(7, 10, 100)
-        }]
-    };
-    json.obj.setOption(option);
-}
-
-function setT02(json) {
-
-    var option = {
-
-        color: ['#cf757c', '#0084f1', '#d9a82b'],
-        title: {
-            text: '利润'
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        legend: {
-            data: ['利润', '实际', '均线']
-
-        },
-        xAxis: [{
-            type: 'category',
-            axisLabel: {
-                interval: 0
-            },
-            data: ['煤炭', '化工', '有色\n金属', '装备\n制造', '物流\n贸易', '建筑\n矿建', '现代\n服务业']
-
-        }],
-        yAxis: [{
-            type: 'value',
-            name: '单位：万元'
-        }],
-        series: [{
-            name: '利润',
-            type: 'line',
-            barWidth: '60%',
-            data: Feng.rndArr(7, 10, 100)
-        }]
-    };
-    json.obj.setOption(option);
-}
-
-function setT03(json) {
-
-    var option = {
-
-        title: {
-            text: '产量对比分析'
-        },
-        color: ['#db502c', '#0084f1', '#d9a82b', '#a6d1ff', '#d4555e', '#3a8e3a', '#9c43a5'],
-        legend: {
-            orient: 'vertical',
-            align: 'left',
-            left: '70%',
-            top: '20%',
-            data: ['煤炭', '化工', '有色金属', '装备制造', '物流贸易', '建筑矿建', '现代服务业   ']
-        },
-        series: [{
-            name: '访问来源',
-            type: 'pie',
-            radius: '75%',
-            center: ['40%', '60%'],
-            label: {
-                normal: {
-                    show: false
-                }
-            },
-            data: [{ value: 400, name: '煤炭' }, { value: 200, name: '化工' }, { value: 300, name: '有色金属' }, { value: 150, name: '装备制造' }, { value: 240, name: '物流贸易' }, { value: 300, name: '建筑矿建' }, { value: 120, name: '现代服务业' }],
-            roseType: 'radius'
-
-        }]
-
-    };
-    json.obj.setOption(option);
-}
-
-function setT04(json) {
-
-    var option = {
-
-        color: ['#2fb8b8', '#0084f1', '#d9a82b'],
-        title: {
-            text: '费用'
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: { // 坐标轴指示器，坐标轴触发有效
-                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
-            }
-        },
-        grid: {
-            left: '3%',
-            right: '4%',
-            bottom: '3%',
-            containLabel: true
-        },
-        legend: {
-            data: ['费用', '实际', '均线']
-
-        },
-        yAxis: [{
-            type: 'category',
-            axisLabel: {
-                interval: 0
-            },
-            data: ['煤炭', '化工', '有色金属', '装备制造', '物流贸易', '建筑矿建', '现代服务业']
-
-        }],
-        xAxis: [{
-            type: 'value'
-            // name: '单位：万元',
-        }],
-        series: [{
-            name: '费用',
             type: 'bar',
             barWidth: '60%',
             data: Feng.rndArr(7, 10, 100)
@@ -190,9 +204,9 @@ function setT05(json) {
 
     var option = {
 
-        color: ['#cf757c', '#0084f1', '#d9a82b'],
+        color: ['#d4555e', '#aec253', '#a6d1ff'],
         title: {
-            text: '瓦斯指标分析'
+            text: '采购金额'
         },
         tooltip: {
             trigger: 'axis',
@@ -204,12 +218,12 @@ function setT05(json) {
             left: '3%',
             right: '4%',
             bottom: '3%',
-            top: '30%',
+            // top: '30%',
             containLabel: true
         },
         legend: {
-            top: '10%',
-            data: ['抽采量', '利用量', '抽采利用率']
+
+            data: ['采购金额', '采购计划完成率', '库存周转率']
 
         },
         xAxis: [{
@@ -217,7 +231,7 @@ function setT05(json) {
             axisLabel: {
                 interval: 0
             },
-            data: ['煤炭', '化工', '有色\n金属', '装备\n制造', '物流\n贸易', '建筑\n矿建', '现代\n服务业']
+            data: ['A公司', 'B公司', 'C公司', 'D公司', 'E公司', 'F公司', 'G公司']
 
         }],
         yAxis: [{
@@ -225,15 +239,16 @@ function setT05(json) {
             name: '单位：万元'
         }],
         series: [{
-            name: '抽采量',
+            name: '采购金额',
             type: 'bar',
+            barWidth: '40%',
             data: Feng.rndArr(7, 10, 100)
         }, {
-            name: '利用量',
-            type: 'bar',
+            name: '采购计划完成率',
+            type: 'line',
             data: Feng.rndArr(7, 10, 100)
         }, {
-            name: '抽采利用率',
+            name: '库存周转率',
             type: 'line',
             data: Feng.rndArr(7, 10, 100)
         }]
@@ -403,6 +418,7 @@ function setMap(json) {
             width: '30%'
         },
         legend: {
+            show: false,
             left: 'center',
             top: 'bottom',
             data: ['煤炭', '化工', '有色金属', '装备制造', '物流贸易', '建筑建', '现代服务业']

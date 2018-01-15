@@ -420,8 +420,8 @@
             }
         },
         "legend": {
-            "left":"80%",
-            "top":"5%",
+            "left":"right",
+            "top":"30px",
             "textStyle": {
                 "color": "#e5f9fa"
             }

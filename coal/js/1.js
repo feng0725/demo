@@ -186,7 +186,7 @@ function setT04(json) {
             align: 'left',
             left: '65%',
             top: 'center',
-            data:['原煤','洗煤','商品煤'],
+            data:['原煤 15%','洗煤 55%','商品煤 30%'],
         },
         series : [
             {
@@ -200,9 +200,9 @@ function setT04(json) {
                     }
                 },
                 data:[
-                    {value:100, name:'原煤'},
-                    {value:400, name:'洗煤'},
-                    {value:350, name:'商品煤'},
+                    {value:100, name:'原煤 15%'},
+                    {value:400, name:'洗煤 55%'},
+                    {value:350, name:'商品煤 30%'},
                     // {value:300, name:'D仓库'},
                     // {value:250, name:'E仓库'},
                     // {value:200, name:'F仓库'},

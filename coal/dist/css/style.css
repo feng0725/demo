@@ -54,14 +54,13 @@ header ul >li a {
 
     font-size:0.9vw;
     margin-right:0.3vw;
-    border:2px solid #71b8c3;
+    border:1px solid #71b8c3;
+    box-shadow:   0 0 1px 0.5px #71b8c3;
     border-radius: 5px;
-    border-top:0;
-    border-bottom:0;
     margin: 0.5vh 0.3vw 0.5vh 0 ;
 }
 header ul > li:nth-child(1) a{
-    width:6vw;
+    width:7vw;
     height:4vh;
     line-height: 4vh;
     font-size:1vw;
@@ -94,7 +93,13 @@ header ul > li a.active ,header ul > li:hover a{
     color:#e5f9fa;
     text-align: right;
 }
-
+.table-bordered>tbody>tr>td, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>td, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>thead>tr>th {
+    border:1px solid #274a70;
+    color:#e5f9fa;
+}
+.table-bordered{
+    border:1px solid #274a70;
+}
 /*-------table  box end--------*/
 
 h1,h2,h3,h4,h5,h6 {

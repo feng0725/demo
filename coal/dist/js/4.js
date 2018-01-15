@@ -129,8 +129,8 @@ function setT03(json) {
         legend: {
             orient: 'vertical',
             align: 'left',
-            left: '65%',
-            top: 'center',
+            left: 'right',
+            top: '20%',
             data: ['A仓库', 'B仓库', 'C仓库', 'D仓库', 'E仓库', 'F仓库', 'G仓库']
         },
         series: [{
@@ -302,14 +302,14 @@ function setT07(json) {
 
     var option = {
         title: {
-            text: '采购房子是占比'
+            text: '采购方式占比分析'
         },
         color: ['#9c43a5', '#db502c', '#0084f1', '#d9a82b', '#a6d1ff', '#d4555e', '#3a8e3a'],
         legend: {
             orient: 'vertical',
             align: 'left',
-            left: '65%',
-            top: 'center',
+            left: 'right',
+            top: '20%',
             data: ['A仓库', 'B仓库', 'C仓库', 'D仓库', 'E仓库', 'F仓库', 'G仓库']
         },
         series: [{

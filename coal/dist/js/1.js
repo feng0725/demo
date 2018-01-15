@@ -162,7 +162,7 @@ function setT04(json) {
             align: 'left',
             left: '65%',
             top: 'center',
-            data: ['原煤', '洗煤', '商品煤']
+            data: ['原煤 15%', '洗煤 55%', '商品煤 30%']
         },
         series: [{
             name: '访问来源',
@@ -174,7 +174,7 @@ function setT04(json) {
                     show: false
                 }
             },
-            data: [{ value: 100, name: '原煤' }, { value: 400, name: '洗煤' }, { value: 350, name: '商品煤' }],
+            data: [{ value: 100, name: '原煤 15%' }, { value: 400, name: '洗煤 55%' }, { value: 350, name: '商品煤 30%' }],
             roseType: 'radius'
 
         }]
