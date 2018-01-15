@@ -15,7 +15,7 @@
     <ul class="clearfix">
         <li><a href="index.html">煤炭</a></li>
         <li><a href="1.html">生产分析</a></li>
-        <li ><a href="3.html" class="active">产量分析</a></li>
+        <li><a href="3.html" class="active">销量分析</a></li>
         <li><a href="4.html">物资分析</a></li>
         <li><a href="2.html">物流分析</a></li>
 
@@ -23,26 +23,39 @@
 </header>
 
 <div class="content">
-    <div class="top clearfix">
-        <div class="t01 clearfix">
-            <ul class="clearfix">
-                <li class="active">原煤销量</li>
-                <li>洗煤销量</li>
-                <li>煤粉销量</li>
-            </ul>
-            <div id="t01"></div>
-        </div>
+    <div class="left clearfix">
+        <div id="t01"></div>
         <div id="t02"></div>
-    </div>
-    <div class="bottom clearfix">
         <div id="t03"></div>
+    </div>
+    <div class="center">
         <div id="t04"></div>
+        <ul class="text-box clearfix">
+            <li>
+                <div>32,455</div>
+                <div>商品煤汇款总额/万元</div>
+            </li>
+            <li>
+                <div>32,455</div>
+                <div>内外部用户加款额/万元</div>
+            </li>
+            <li>
+                <div>32,455</div>
+                <div>现汇回款比例/万元</div>
+            </li>
+        </ul>
         <div id="t05"></div>
+    </div>
+    <div class="right clearfix">
+        <div id="t06"></div>
+        <div id="t07"></div>
+        <div id="t08"></div>
     </div>
 </div>
 
 <script src="common/jquery-3.2.1.min.js"></script>
 <script src="common/echarts/echarts.min.js"></script>
+<script src="common/echarts/china.js"></script>
 <script src="common/echarts/customed.js"></script>
 <script src="dist/js/Feng.js"></script>
 <script src="dist/js/3.js"></script>
