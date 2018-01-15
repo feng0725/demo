@@ -6,6 +6,10 @@ var gulp = require("gulp"),
 gulp.task("babeljs", function () {
     return gulp.src("coal/js/*.js")
         .pipe(babel())
+        .on('error', function(err) {
+            console.log('babel Error!', err.message);
+            this.end();
+        })
         .pipe(gulp.dest("coal/dist/js"));
 });
 gulp.task("watch",function(){

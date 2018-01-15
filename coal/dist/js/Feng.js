@@ -17,7 +17,7 @@ var Feng = {
         return arr;
     },
     rnd: function rnd(n, m) {
-        return Math.floor(Math.random() * m + n);
+        return Math.floor(Math.random() * (m - n)) + n;
     },
     rndArr: function rndArr(length, n, m) {
         var arr = [];

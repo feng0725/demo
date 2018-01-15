@@ -13,7 +13,7 @@ let Feng = {
         return arr
     },
     rnd(n, m) {
-        return Math.floor(Math.random() * m + n)
+        return Math.floor(Math.random() * (m-n)) +n
     },
     rndArr(length, n, m) {
         let arr = []

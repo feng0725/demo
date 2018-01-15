@@ -70,3 +70,25 @@ header ul > li a.active ,header ul > li:hover a{
     background-color:#052557
 }
 
+/*-------table  box start--------*/
+.table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th{
+    padding:0.45vh;
+    text-align: center;
+    font-size:0.2vw;
+    color:#e5f9fa
+}
+ .table>tbody>tr>th,   .table>thead>tr>th{
+     background-color: #05154d;
+ }
+.table-box h2 {
+    text-align: center;
+    color:#e5f9fa;
+    font-size:1.2vw;
+    margin: 0.5vh 0;
+}
+
+/*-------table  box end--------*/
+
+h1,h2,h3,h4,h5,h6 {
+    margin:0
+}
