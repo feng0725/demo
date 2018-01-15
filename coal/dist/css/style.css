@@ -1,3 +1,6 @@
+* {
+    box-sizing: border-box;
+}
 html, body {
     height:100%;
 }
@@ -85,6 +88,11 @@ header ul > li a.active ,header ul > li:hover a{
     color:#e5f9fa;
     font-size:1.2vw;
     margin: 0.5vh 0;
+}
+.table-box .name {
+    font-size:0.2vw;
+    color:#e5f9fa;
+    text-align: right;
 }
 
 /*-------table  box end--------*/
