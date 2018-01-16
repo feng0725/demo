@@ -9,12 +9,9 @@
     width:44vw;
     float: left;
 }
-
 #t01,#t02 ,#t03,#t04,#t05{
     width:24.8vw;
     height:28vh;
-    border:1px solid #0096de ;
-    margin-bottom: 1.8vh;
 }
 #t03 {
     height: 24vh;

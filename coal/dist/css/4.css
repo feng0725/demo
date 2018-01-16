@@ -7,16 +7,24 @@
 
 
 
+.char,.table-box {
+    margin-right: 1vw;
+    margin-bottom: 0;
+}
 
-
-#t01,#t02 ,#t03,#t04,#t05,#t06,#t07,#t08,#t09{
+#t01,#t02 ,#t03,#t04,#t05,#t06,#t07,#t08,#t09 {
     width:30vw;
     height:26.5vh;
-    border:1px solid #0096de ;
-    margin-right: 1vw;
     float: left;
 
 }
+/*#t07,#t08,#t09 {*/
+    /*width:30vw;*/
+    /*height:24vh;*/
+    /*float: left;*/
+
+/*}*/
+
 #t03,#t06,#t09{
     margin:0;
 }

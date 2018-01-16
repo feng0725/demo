@@ -3,6 +3,7 @@
 }
 html, body {
     height:100%;
+    overflow: hidden;
 }
 .clearfix:after {
     display: block;
@@ -105,3 +106,14 @@ header ul > li a.active ,header ul > li:hover a{
 h1,h2,h3,h4,h5,h6 {
     margin:0
 }
+
+/*-------------char start ------------*/
+.char {
+    background-image: url("../../img/border-box.png");
+    background-size: 100% 100%;
+    float: left;
+    margin-bottom: 1.8vh;
+
+}
+
+/*-------------char end ------------*/

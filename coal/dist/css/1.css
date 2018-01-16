@@ -6,22 +6,21 @@
 }
 
 
+.char {
+    margin-right: 1vw;
+}
 #t01,#t02 {
     width:45.5vw;
     height:39vh;
-    border:1px solid #0096de;
     float: left;
-    margin-right: 1vw;
 }
 
 #t03 ,#t04,#t05{
     width:30vw;
     height:39vh;
-    border:1px solid #0096de ;
-    margin-right: 1vw;
     float: left;
 }
-#t02,#t05{
+.t02,#t05{
     margin:0;
 }
 #t05 {
