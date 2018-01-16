@@ -156,7 +156,7 @@ function setT03(json) {
             {
                 name: '访问来源',
                 type: 'pie',
-                radius: '75%',
+                radius: ['15%','75%'],
                 center: ['40%', '60%'],
                 label: {
                     normal: {
