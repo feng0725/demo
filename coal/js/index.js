@@ -306,7 +306,7 @@ function setMap(json) {
 
 
     var data = [
-        {name: "上海", value: 29780},
+        {name: "河南", value: 29780},
         {name: "珠海", value: 2186},
         {name: "三亚", value: 1135},
         {name: "惠州", value: 1973},
@@ -348,6 +348,7 @@ function setMap(json) {
 
     var geoCoordMap = {
         "上海": [121.48, 31.22],
+        "河南": [113.663948,34.754869],
         "珠海": [113.52, 22.3],
         "三亚": [109.31, 18.14],
         "惠州": [114.4, 23.09],
