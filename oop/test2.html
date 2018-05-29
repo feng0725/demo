@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="div1">
+    <input class="active" type="button" value="教育"/>
+    <input type="button" value="财经"/>
+    <input type="button" value="aaa"/>
+    <div style="display:block;">11111</div>
+    <div style="display:none">22222</div>
+    <div style="display:none">33333</div>
+</div>
+<script>
+    var aDiv = null;   //声明全局变量
+    var aBtn = null;   //声明全局变量
+
+    window.onload = function () {
+        var oDiv = document.getElementById('div1');      //获取父级
+        aBtn = oDiv.getElementsByTagName('input');   //获取oDiv下的所有的input
+        aDiv = oDiv.getElementsByTagName('div');     //获取oDiv下的所有div
+        var i = 0;    //预先设置变量 i
+        //思路：清除所有的input元素上的class，并影藏对应的div。
+        //然后：添加当前点击的那个input的class。并显示对应的那个div
+
+        for (i = 0; i < aBtn.length; i++) {
+            aBtn[i].index = i;    //给每一个input元素新增加一个属性index
+            aBtn[i].onclick = tab;
+        }
+    };
+
+    function tab() {
+        //思路：先清除所有的input上面的class，并隐藏input对应的div
+        for (i = 0; i < aBtn.length; i++) {
+            aBtn[i].className = '';
+            aDiv[i].style.display = 'none';
+        }
+
+        //思路：然后给当前点击的那个input添加上class = active,并显示出input对应的那个div
+        this.className = 'active';
+        aDiv[this.index].style.display = 'block';
+    };
+
+    window.onbeforeunload = function (e) {
+        e = e || window.event;
+
+        // 兼容IE8和Firefox 4之前的版本
+        if (e) {
+            e.returnValue = '关闭123123123123提示';
+        }
+    alert(123)
+        // Chrome, Safari, Firefox 4+, Opera 12+ , IE 9+
+        return '关123123123闭提示';
+    };
+</script>
+</body>
+</html>

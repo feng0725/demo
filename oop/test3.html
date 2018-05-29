@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+
+<div id="div1">
+    <input class="active" type="button" value="教育"/>
+    <input type="button" value="财经"/>
+    <input type="button" value="aaa"/>
+    <div style="display:block;">11111</div>
+    <div style="display:none">22222</div>
+    <div style="display:none">33333</div>
+</div>
+<script>
+    window.onload = function () {
+        var oTab = new TabSwitch('div1');
+    }
+
+    function TabSwitch(id)   //构造函数
+    {
+        var oDiv = document.getElementById(id);      //获取父级
+        this.aBtn = oDiv.getElementsByTagName('input');   //获取oDiv下的所有的input
+        this.aDiv = oDiv.getElementsByTagName('div');     //获取oDiv下的所有div
+        var i = 0;    //预先设置变量 i
+        //思路：清除所有的input元素上的class，并影藏对应的div。
+        //然后：添加当前点击的那个input的class。并显示对应的那个div
+
+        var _this = this;  //this表示new出来的对象
+
+        for (i = 0; i < this.aBtn.length; i++) {
+            this.aBtn[i].index = i;    //给每一个input元素新增加一个属性index
+            this.aBtn[i].onclick = function () {
+                _this.tab(this);   // **  _this表示通过构造函数new出来的对象。 this表示调用事件onclick的对象--> 按钮input
+            }
+
+        }
+    };
+
+    TabSwitch.prototype.tab = function (oBtn) {
+        //思路：先清除所有的input上面的class，并隐藏input对应的div
+        for (i = 0; i < this.aBtn.length; i++)   //this表示通过构造函数new出来的对象
+        {
+            this.aBtn[i].className = '';
+            this.aDiv[i].style.display = 'none';
+        }
+
+        //思路：然后给当前点击的那个input添加上class = active,并显示出input对应的那个div
+        oBtn.className = 'active';
+        this.aDiv[oBtn.index].style.display = 'block';
+    };
+</script>
+</body>
+</html>

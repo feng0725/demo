@@ -11,12 +11,15 @@ var browserSync = require('browser-sync');
 // 整合 streams 来处理错误
 var combiner = require('stream-combiner2');
 
+var FILE_PATH = 'test1'
+
+
 // bable 编译
 gulp.task("babeljs", function () {
 	var combined = combiner.obj([
-		gulp.src("coal/js/*.js"),
+		gulp.src(`${FILE_PATH}/compile/js/*.js`),
 		babel(),
-		gulp.dest("coal/dist/js"),
+		gulp.dest(`${FILE_PATH}/js`),
 		browserSync.reload({stream: true})])
 
 	combined.on('error', console.error.bind(console))
@@ -26,10 +29,10 @@ gulp.task("babeljs", function () {
 // stylus 编译
 gulp.task('stylus', function () {
 	var combined = combiner.obj([
-		gulp.src('coal/css/*.styl'),
+		gulp.src(`${FILE_PATH}/compile/css/*.styl`),
 		stylus(),
 		autoprefixer(),
-		gulp.dest('coal/dist/css'),
+		gulp.dest(`${FILE_PATH}/css`),
 		browserSync.reload({stream: true})])
 
 	combined.on('error', console.error.bind(console))
@@ -38,9 +41,9 @@ gulp.task('stylus', function () {
 
 // 监听
 gulp.task("watch", function () {
-	gulp.watch('coal/js/*.js', ['babeljs']);
-	gulp.watch('coal/css/*.styl', ['stylus']);
-	gulp.watch('coal/*.html', browserSync.reload);
+	gulp.watch(`${FILE_PATH}/compile/js/*.js`, ['babeljs']);
+	gulp.watch(`${FILE_PATH}/compile/css/*.styl`, ['stylus']);
+	gulp.watch(`${FILE_PATH}/**/*.html`, browserSync.reload);
 })
 
 
@@ -49,7 +52,7 @@ gulp.task("watch", function () {
 gulp.task('browserSync', function () {
 	browserSync.init({
 		server: {
-			baseDir: 'coal'
+			baseDir: `${FILE_PATH}`
 		}
 	})
 });

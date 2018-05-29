@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="cmn-Hans">
+<head>
+    <title>详情</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <meta name="format-detection" content="telephone=no,email=no"/>
+    <link rel="stylesheet" type="text/css" href="css/base2.0.bdfb2ba5.css" />
+    <link rel="stylesheet" type="text/css" href="css/mymobile.1504281f.css"/>
+
+    <style type="text/css">
+        body{
+            font-family: "Microsoft YaHei",Arial,Helvetica,sans-serif ;
+            background: #F8F8F8;
+
+        }
+        .lecture h2{
+            margin-bottom:0 ;
+        }
+        .lecture_pic{
+            width: 9.387rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            /*position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -4.6935rem;
+            margin-top: -7rem;*/
+        }
+        .lecture_time{
+            font-size: 1.28rem;
+        }
+        .msg_warp{
+            display: none;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            background: rgba(0,0,0,0.7);
+        }
+        .msg_box{
+            width: 12.8rem;
+            height: 14.507rem;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -6.4rem;
+            margin-top: -8.533rem;
+            background: #fff;
+        }
+
+        .Mob_cls,.Com_cls{
+            display: block;
+        }
+        .lecture_pic div{
+            width: 5.12rem;
+            margin: 0.853rem auto;
+        }
+        .lecture_pic button{
+            line-height: 36px;
+            width: 100%;
+            font-size: 15px;
+            color: #FFF;
+            background-color:#60caa8 ;
+            border-radius: 6px;
+            margin: 15px 0;
+
+        }
+        .lecture_pic .Mob_cls{
+            text-decoration: underline;
+            text-align: center;
+            font-size: 14px;
+            color: #f3580f;
+        }
+        .close_btn{
+            width: 18px;
+            float: right;
+            margin: 8px;
+        }
+        .comp_load,.mob_msg{
+            display: none;
+            width: 11.093rem;
+            margin: 1.28rem auto;
+            text-align: center;
+        }
+        .comp_load p{
+            font-size:14px;
+            line-height: 55px;
+        }
+        .mob_msg p{
+            font-size:18px;
+            line-height: 55px;
+            color: #000;
+        }
+        .comp_load button{
+            width: 4.907rem;
+            height: 1.621rem;
+            border-radius: 16px;
+            color: #fff;
+            font-size: 15px;
+        }
+        .comp_load button:first-of-type{
+            background: #60c9a8;
+        }
+        .comp_load button:last-of-type{
+            background: #f27d38;
+        }
+        .mob_msg button:first-of-type{
+            background: #60c9a8;
+            width: 10.24rem;
+            height: 1.621rem;
+            border-radius: 16px;
+            color: #fff;
+            font-size: 15px;
+        }
+    </style>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    docEl.style.fontSize = 23.4375 * (clientWidth / 375) + 'px';
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+<section class="lecture">
+    <h2 id="cName"></h2>
+    <div class="lecture_time"></div>
+    <div class="lecture_pic">
+        <img src="img/mlck.bfb1bd2e.png" />
+        <div>
+            <button class="Com_cls ">用电脑上课</button>
+            <a class="Mob_cls">用手机上课 ＞</a>
+        </div>
+    </div>
+    <div class="msg_warp">
+        <div class="msg_box">
+				<span class="close_btn">
+					<img src="img/close.96bea516.jpg" width="18px"/>
+				</span>
+            <div class="comp_load" >
+                <img src="img/Warning.0a7fb9b8.png" width="100px" />
+                <p>手机端和电脑客户端不能同步在线</p>
+                <button id="mob_look">手机观看</button>
+                <button id="pc_look">电脑观看</button>
+            </div>
+            <!--<div class="mob_msg">
+                <img src="img/Prompt.png" width="100px" />
+                <p>手机登陆无法参与互动哦！</p>
+                <button>进入直播</button>
+            </div>-->
+        </div>
+        <!--<div class="mob_msg">
+            <span class="close_btn">
+                <img src="img/close.96bea516.jpg" width="18px"/>
+            </span>
+        </div>-->
+    </div>
+</section>
+<script type="text/javascript" src="js/jquery-2.1.4.min.97ce27c4.js"></script>
+<script type="text/javascript" src="js/base.86090369.js"></script>
+<script type="text/javascript" src="js/storage.530a9a7f.js"></script>
+<script type="text/javascript" charset="utf-8">
+
+    $(function(){
+        var theUrl = window.location.href;
+        var content_p = theUrl.split("?")[1];
+        //var content_ps = content_p.split("&")[1];
+        var content_name = content_p.split("_")[0]; //课程名称
+        var m_direct_id = content_p.split("_")[1];//课程id
+        var m_section_id = content_p.split("_")[2];//课程小节id
+        var user_id = content_p.split("_")[3];//用户id
+        Storage.set("curriculumUserId",user_id);
+        content_name= decodeURI(content_name);
+        $("#cName").html(content_name);
+        function toDouble(n){
+            return n<10?'0'+n:''+n;
+        }
+        //现在时间
+        var oDate=new Date();
+        var h=oDate.getHours();
+        var m=oDate.getMinutes();
+        var s=oDate.getSeconds();
+        var str=toDouble(h)+':'+toDouble(m)+':'+toDouble(s);
+        $(".lecture_time").html(str);
+        //关闭按钮
+        $(".close_btn").click(function(){
+            $(".msg_warp").hide();
+        });
+        //电脑如何上课
+        $(".Com_cls").click(function(){
+            window.location.href="pc_haoClass.html"
+        });
+        //手机上课
+        $(".Mob_cls").click(function(){
+            $(".msg_warp").show();
+            $(".comp_load").show();
+        });
+        $("#mob_look").click(function(){
+            $.ajax({
+                url:current_url+"/rmp/VideoLoginServlet",
+                type:"post",
+                dataType:"json",
+                data:{name:"channelId",lessonId:m_section_id},
+                success:function(data){
+                    if(data !=null && data.list !=null){
+                        window.location.href=current_url+"/rmp/page/book_city/html/video_live.html?"+m_section_id";
+                    }else{
+                        alert("老师还没有来上课！");
+                    }
+                }
+            });
+        });
+        $("#pc_look").click(function(){
+            window.location.href="pc_haoClass.html"
+        });
+    });
+</script>
+</body>
+</html>

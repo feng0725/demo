@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640,user-scalable=0,target-densitydpi=device-dpi"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+<div id="container">
+
+</div>
+</body>
+<script>
+	!(function (doc) {
+		var cont = doc.getElementById("container");
+		var cw = window.innerWidth;
+		var ch = window.innerHeight;
+
+		var canvas = document.createElement('canvas');
+		canvas.width = cw;
+		canvas.height = ch;
+		canvas.style.zIndex = 8;
+		canvas.style.position = "absolute";
+		cont.appendChild(canvas);
+		var cont2D = canvas.getContext("2d");
+
+		var video = document.createElement('video');
+		video.preload = "auto";
+		video.volume = 0.3;
+		video.setAttribute('x-webkit-airplay', true);
+		video.setAttribute('webkit-playsinline', true);
+		video.setAttribute('playsinline', true);
+		video.setAttribute('webkit-playsinline', 'webkit-playsinline');
+		video.src = 'Video.mp4';
+
+		video.addEventListener("play", function () {
+			draw(this, canvas, cont2D, cw, ch);
+		}, false)
+		canvas.addEventListener('click',function(){
+			video.play()
+            // alert(2)
+        })
+
+		function cerateCanvas(w, h) {
+			var cr = doc.createElement("canvas");
+			cr.width = w;
+			cr.height = h;
+			return cr;
+		}
+
+		function draw(v, c, c2, w, h) {
+			if (v.paused || v.ended) {
+				cancelAnimationFrame(stop);
+				return false;
+			}
+			c2.drawImage(v, 0, 0, w, h);
+			var stop = requestAnimationFrame(function () {
+				draw(v, c, c2, w, h);
+			});
+		}
+	})(document)
+</script>
+
+</html>
